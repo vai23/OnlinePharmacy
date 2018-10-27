@@ -30,11 +30,7 @@
         </activity>
         <activity
             android:name=".OnlinePharmacy"
-            android:parentActivityName=".MainActivity"
             android:theme="@style/OnlinePharmacyTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
         </activity>
     </application>
 
