@@ -2,4 +2,6 @@
     <string name="app_name">OnlinePharmacy</string>
     <string name="online">Online</string>
     <string name="pharmacy">Pharmacy</string>
+    <string name="register">Register</string>
+    <string name="toolbarTile">Signup</string>
 </resources>

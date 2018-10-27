@@ -93,11 +93,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username"
-        app:layout_constraintVertical_bias="0.07999998" />
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="151dp"
+        android:id="@+id/login"
+        android:layout_width="144dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:layout_marginEnd="8dp"
@@ -121,8 +121,8 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="151dp"
+        android:id="@+id/signup"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:layout_marginEnd="8dp"
@@ -134,14 +134,15 @@
         android:background="@drawable/button_signup"
         android:elevation="4dp"
         android:fontFamily="@font/actor"
+        android:onClick="signupPressed"
         android:text="SignUp"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/login"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="1.0" />
 
