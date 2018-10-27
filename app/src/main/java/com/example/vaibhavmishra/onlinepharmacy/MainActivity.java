@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(this,SignupPage.class);
         startActivity(intent);
     }
+
+    public void login(View view) {
+        Intent intent=new Intent(this,OnlinePharmacy.class);
+        startActivity(intent);
+    }
 }
