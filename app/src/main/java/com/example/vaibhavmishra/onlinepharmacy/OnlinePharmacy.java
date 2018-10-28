@@ -52,6 +52,11 @@ public class OnlinePharmacy extends AppCompatActivity {
     }
 
     public void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return;
+        }
         if(countBack<1)
         {
             Toast toast=Toast.makeText(this,"Press again to exit",Toast.LENGTH_SHORT);
