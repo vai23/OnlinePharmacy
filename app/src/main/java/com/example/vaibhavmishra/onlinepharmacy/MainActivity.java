@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 public class MainActivity extends AppCompatActivity {
 
     private CheckBox owner, staff;
+    private boolean isOwnerChecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         owner=findViewById(R.id.owner);
         staff=findViewById(R.id.staff);
+        owner.setChecked(true);
+        isOwnerChecked=true;
         owner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
