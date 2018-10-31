@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view) {
         Intent intent=new Intent(this,OnlinePharmacy.class);
+        intent.putExtra("OWNER",isOwnerChecked);
+        intent.putExtra("STAFF",!isOwnerChecked);
         startActivity(intent);
     }
 }
