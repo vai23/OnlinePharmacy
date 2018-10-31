@@ -2,7 +2,6 @@ package com.example.vaibhavmishra.onlinepharmacy;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
@@ -11,16 +10,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.Space;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
@@ -53,6 +51,22 @@ public class OnlinePharmacy extends AppCompatActivity {
         {
             View v=LayoutInflater.from(this).inflate(R.layout.medicine_information,null);
             linearLayout.addView(v);
+            ImageButton add=v.findViewById(R.id.add_item);
+            ImageButton remove=v.findViewById(R.id.remove_item);
+            final EditText editText=v.findViewById(R.id.total_number_of_medicines);
+            add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())+1));
+                }
+            });
+            remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!editText.getText().toString().equals("0"))
+                    editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())-1));
+            }
+        });
             setRipple(v);
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
