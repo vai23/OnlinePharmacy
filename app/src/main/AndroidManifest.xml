@@ -36,10 +36,17 @@
             android:theme="@style/OnlinePharmacyTheme">
 
         </activity>
-        <activity android:name=".Bill"
+        <activity
+            android:name=".Bill"
             android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
+        </activity>
+        <activity android:name=".Payment"
+            android:parentActivityName=".Bill">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".OnlinePharmacy"/>
+                android:value=".Bill" />
         </activity>
     </application>
 
