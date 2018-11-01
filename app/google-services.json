@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "944087998585",
+    "firebase_url": "https://onlinepharmacy-579ad.firebaseio.com",
+    "project_id": "onlinepharmacy-579ad",
+    "storage_bucket": "onlinepharmacy-579ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944087998585:android:e3aa9c95279ee499",
+        "android_client_info": {
+          "package_name": "com.example.vaibhavmishra.onlinepharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944087998585-q9424apcmu55bil472jd6brbrv874tat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vaibhavmishra.onlinepharmacy",
+            "certificate_hash": "6158a6e834d0541c68b0dfe11abcbdb5c65969ee"
+          }
+        },
+        {
+          "client_id": "944087998585-ibghn9kf5eh3jtdpbvueef1beca2t5q2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBseyVLCehRPXjYDxEa4JG9uYHZkB5ESI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944087998585-ibghn9kf5eh3jtdpbvueef1beca2t5q2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
