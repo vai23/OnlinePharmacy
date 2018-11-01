@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -28,6 +30,7 @@ public class OnlinePharmacy extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private LinearLayout linearLayout;
+    private Button checkout;
     private boolean isOwnerChecked, isStaffChecked;
     private Toolbar toolbar;
     private int countBack=0;
@@ -48,6 +51,13 @@ public class OnlinePharmacy extends AppCompatActivity {
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
         drawerLayout=findViewById(R.id.drawer_layout);
+        checkout=findViewById(R.id.checkout_button);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkout_med(view);
+            }
+        });
 
         linearLayout=findViewById(R.id.list_holder);
         if(isStaffChecked)      // If Staff is Checked------------------------
@@ -84,6 +94,15 @@ public class OnlinePharmacy extends AppCompatActivity {
                 linearLayout.addView(space);
             }
         }
+        else {
+            View button=findViewById(R.id.checkout_button);
+            ((ViewGroup)button.getParent()).removeView(button);
+        }
+    }
+
+    private void checkout_med(View view) {
+        Intent intent=new Intent(this,Bill.class);
+        startActivity(intent);
     }
 
     private void setRipple(View v) {
