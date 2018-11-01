@@ -60,17 +60,30 @@
 
     </android.support.constraint.ConstraintLayout>
 
+    <Button
+        android:id="@+id/checkout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/checkout_button_styler"
+        android:elevation="4dp"
+        android:text="Checkout"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="16sp" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/checkout_button"
         android:layout_below="@id/constraintSearchHolder">
+
         <LinearLayout
-            android:orientation="vertical"
             android:id="@+id/list_holder"
-            android:padding="4dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp" />
     </ScrollView>
 
 </RelativeLayout>
