@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         owner=findViewById(R.id.owner);
         staff=findViewById(R.id.staff);
@@ -42,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view) {
         Intent intent=new Intent(this,OnlinePharmacy.class);
-        intent.putExtra("OWNER",isOwnerChecked);
-        intent.putExtra("STAFF",!isOwnerChecked);
+        intent.putExtra("OWNER",owner.isChecked());
+        intent.putExtra("STAFF",staff.isChecked());
         startActivity(intent);
     }
 }

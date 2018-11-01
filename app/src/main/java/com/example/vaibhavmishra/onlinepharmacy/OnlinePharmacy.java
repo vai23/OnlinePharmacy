@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Space;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
@@ -27,7 +28,8 @@ public class OnlinePharmacy extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private LinearLayout linearLayout;
-    private boolean isOwnerChecked;
+    private boolean isOwnerChecked, isStaffChecked;
+    private Toolbar toolbar;
     private int countBack=0;
 
     @Override
@@ -37,8 +39,9 @@ public class OnlinePharmacy extends AppCompatActivity {
 
         Intent intent=getIntent();
         isOwnerChecked=intent.getBooleanExtra("OWNER",false);
+        isStaffChecked=intent.getBooleanExtra("STAFF",false);
 
-        Toolbar toolbar=findViewById(R.id.toolbar);
+        toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -47,36 +50,39 @@ public class OnlinePharmacy extends AppCompatActivity {
         drawerLayout=findViewById(R.id.drawer_layout);
 
         linearLayout=findViewById(R.id.list_holder);
-        for(int i=0;i<15;i++)
+        if(isStaffChecked)      // If Staff is Checked------------------------
         {
-            View v=LayoutInflater.from(this).inflate(R.layout.medicine_information,null);
-            linearLayout.addView(v);
-            ImageButton add=v.findViewById(R.id.add_item);
-            ImageButton remove=v.findViewById(R.id.remove_item);
-            final EditText editText=v.findViewById(R.id.total_number_of_medicines);
-            add.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())+1));
-                }
-            });
-            remove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!editText.getText().toString().equals("0"))
-                    editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())-1));
+            for(int i=0;i<15;i++)
+            {
+                View v=LayoutInflater.from(this).inflate(R.layout.medicine_information,null);
+                linearLayout.addView(v);
+                ImageButton add=v.findViewById(R.id.add_item);
+                ImageButton remove=v.findViewById(R.id.remove_item);
+                final EditText editText=v.findViewById(R.id.total_number_of_medicines);
+                add.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())+1));
+                    }
+                });
+                remove.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(!editText.getText().toString().equals("0"))
+                            editText.setText(Integer.toString(Integer.parseInt(editText.getText().toString())-1));
+                    }
+                });
+                setRipple(v);
+                v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Log.d("CLICKED","You clicked it!");
+                    }
+                });
+                Space space=new Space(this);
+                space.setMinimumHeight(4);
+                linearLayout.addView(space);
             }
-        });
-            setRipple(v);
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Log.d("CLICKED","You clicked it!");
-                }
-            });
-            Space space=new Space(this);
-            space.setMinimumHeight(4);
-            linearLayout.addView(space);
         }
     }
 
