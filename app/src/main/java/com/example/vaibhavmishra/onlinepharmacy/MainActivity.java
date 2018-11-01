@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         owner=findViewById(R.id.owner);
         staff=findViewById(R.id.staff);
-        owner.setChecked(true);
-        isOwnerChecked=true;
+        staff.setChecked(true);
+        isOwnerChecked=false;
         owner.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

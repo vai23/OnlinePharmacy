@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Payment">
+
+    <requestFocus />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_payment"
@@ -114,6 +118,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/payCash_button"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -130,6 +135,7 @@
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/payOnline_button"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"

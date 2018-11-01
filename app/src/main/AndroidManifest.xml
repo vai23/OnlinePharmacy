@@ -45,10 +45,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".OnlinePharmacy" />
         </activity>
-        <activity android:name=".Payment"
+        <activity
+            android:name=".Payment"
             android:parentActivityName=".Bill">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Bill" />
+        </activity>
+        <activity android:name=".PaymentGateway"
+            android:parentActivityName=".Payment">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Payment" />
         </activity>
     </application>
 
