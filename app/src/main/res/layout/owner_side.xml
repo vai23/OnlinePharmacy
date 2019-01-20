@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/ownerside_relativelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/owner_button_styler"
+            android:fontFamily="@font/actor"
+            android:text="Add Medicine"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/edit_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/owner_button_styler"
+            android:fontFamily="@font/actor"
+            android:text="Edit Medicine"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linearLayout2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_staff_member"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/owner_button_styler"
+            android:fontFamily="@font/actor"
+            android:text="Add Staff Member"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/remove_staff_member"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/owner_button_styler"
+            android:fontFamily="@font/actor"
+            android:text="Remove Staff Member"
+            android:textAllCaps="false"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

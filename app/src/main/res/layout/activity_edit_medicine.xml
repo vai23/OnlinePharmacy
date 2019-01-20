@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".PaymentGateway">
+    tools:context=".EditMedicineActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_payment_gateway"
+        android:id="@+id/edit_medicine_activity_toolbar_t"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -19,9 +19,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/qr_code"/>
+        android:layout_below="@id/edit_medicine_activity_toolbar_t">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/edit_medicine_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp">
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

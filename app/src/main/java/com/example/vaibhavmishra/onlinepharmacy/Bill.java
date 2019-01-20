@@ -14,6 +14,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import static android.view.Gravity.CENTER;
 
 public class Bill extends AppCompatActivity {
@@ -21,11 +23,14 @@ public class Bill extends AppCompatActivity {
     private Toolbar toolbar;
     private Button proceedToPayment;
     private TableLayout tableLayout;
+    public static ArrayList<Cart> cartList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+
+        cartList=new ArrayList<>(OnlinePharmacy.cartList);
 
         toolbar=findViewById(R.id.toolbar_bill);
         setSupportActionBar(toolbar);
@@ -52,7 +57,9 @@ public class Bill extends AppCompatActivity {
 
     private void addBill() {
 
-        for(int i=1;i<31;i++)
+        Cart cart[]=cartList.toArray(new Cart[]{});
+
+        for(int i=-1;i<cart.length;i++)
         {
             TableRow tableRow=new TableRow(this);
             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
@@ -81,7 +88,7 @@ public class Bill extends AppCompatActivity {
             tv2.setTextColor(Color.WHITE);
             tv3.setTextColor(Color.WHITE);
             tv4.setTextColor(Color.WHITE);
-            if(i==1)
+            if(i==-1)
             {
                 tv1.setText("Medicine Name");
                 tv2.setText("Cost");
@@ -94,10 +101,10 @@ public class Bill extends AppCompatActivity {
             }
             else
             {
-                tv1.setText("Keraglo AD 50ml");
-                tv2.setText("229.90");
-                tv3.setText("4");
-                tv4.setText(Double.toString(4*229.90));
+                tv1.setText(cart[i].getName());
+                tv2.setText(cart[i].getCost());
+                tv3.setText(cart[i].getQuantity());
+                tv4.setText(cart[i].getTotalCost());
             }
             tableRow.addView(tv1, new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.5f));
             tableRow.addView(tv2, new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));

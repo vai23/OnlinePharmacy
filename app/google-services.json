@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "944087998585",
-    "firebase_url": "https://onlinepharmacy-579ad.firebaseio.com",
-    "project_id": "onlinepharmacy-579ad",
-    "storage_bucket": "onlinepharmacy-579ad.appspot.com"
+    "project_number": "870736430568",
+    "firebase_url": "https://onlinepharmacy-c479c.firebaseio.com",
+    "project_id": "onlinepharmacy-c479c",
+    "storage_bucket": "onlinepharmacy-c479c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:944087998585:android:e3aa9c95279ee499",
+        "mobilesdk_app_id": "1:870736430568:android:e3aa9c95279ee499",
         "android_client_info": {
           "package_name": "com.example.vaibhavmishra.onlinepharmacy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "944087998585-q9424apcmu55bil472jd6brbrv874tat.apps.googleusercontent.com",
+          "client_id": "870736430568-5t7jhdn0i2jf6n0f4bnrkrbnon3i8iib.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.vaibhavmishra.onlinepharmacy",
-            "certificate_hash": "6158a6e834d0541c68b0dfe11abcbdb5c65969ee"
+            "certificate_hash": "46ece427812bd62aed102770fdcd983fc8eef498"
           }
         },
         {
-          "client_id": "944087998585-ibghn9kf5eh3jtdpbvueef1beca2t5q2.apps.googleusercontent.com",
+          "client_id": "870736430568-339ae4gu6gjihgh072uci8dntt6nduf2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCBseyVLCehRPXjYDxEa4JG9uYHZkB5ESI"
+          "current_key": "AIzaSyDIs9HLlW-lCtqIMV8qsEQZZJYnjb4Sxmk"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "944087998585-ibghn9kf5eh3jtdpbvueef1beca2t5q2.apps.googleusercontent.com",
+              "client_id": "870736430568-339ae4gu6gjihgh072uci8dntt6nduf2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

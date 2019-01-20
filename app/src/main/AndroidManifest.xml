@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vaibhavmishra.onlinepharmacy">
 
-
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -35,9 +36,7 @@
         <activity
             android:name=".OnlinePharmacy"
             android:launchMode="singleTask"
-            android:theme="@style/OnlinePharmacyTheme">
-
-        </activity>
+            android:theme="@style/OnlinePharmacyTheme" />
         <activity
             android:name=".Bill"
             android:parentActivityName=".OnlinePharmacy">
@@ -52,10 +51,47 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Bill" />
         </activity>
-        <activity android:name=".PaymentGateway"
+        <activity
+            android:name=".PaymentGateway"
             android:parentActivityName=".Payment">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Payment" />
+        </activity>
+        <activity
+            android:name=".AddMedicineForm"
+            android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
+        </activity>
+        <activity
+            android:name=".AddStaffMemberActivity"
+            android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
+        </activity>
+        <activity
+            android:name=".EditMedicineActivity"
+            android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
+        </activity>
+        <activity
+            android:name=".EditStaffActivity"
+            android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:parentActivityName=".OnlinePharmacy">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OnlinePharmacy" />
         </activity>
     </application>
 

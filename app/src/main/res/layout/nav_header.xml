@@ -14,6 +14,7 @@
         android:layout_height="109dp"
         android:src="@drawable/person" />
     <TextView
+        android:id="@+id/show_username"
         android:layout_width="match_parent"
         android:textColor="#ffffff"
         android:text="Username"
